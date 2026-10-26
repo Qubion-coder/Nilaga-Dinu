@@ -1208,9 +1208,9 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
                   <div className="card-time">At 8:00 AM</div>
 
                   <div className="card-venue">
-                    179, 183 Thalvupadu–Mannar Road
+                    Ahash Hotel
                     <br />
-                    Mannar 41000, Sri Lanka
+                    Thalvupadu–Mannar Road, Mannar
                   </div>
                 </div>
               </div>

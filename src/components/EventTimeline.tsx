@@ -5,7 +5,7 @@ const events = [
   {
     time: '8.00 AM',
     title: 'Arrival & Welcome',
-    description: 'Guests gather at the venue on Thalvupadu–Mannar Road for a warm welcome.',
+    description: 'Guests gather at Ahash Hotel, Mannar for a warm welcome.',
     icon: MapPin,
   },
   {

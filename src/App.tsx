@@ -349,8 +349,8 @@ export default function App() {
                 <MapPin className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-serif text-[#5C0F1C] mb-3">Venue</h3>
-              <p className="text-xl text-gray-700 font-serif">179, 183 Thalvupadu–Mannar Road</p>
-              <p className="text-sm text-gray-500 mt-2 uppercase tracking-widest">Mannar 41000, Sri Lanka</p>
+              <p className="text-xl text-gray-700 font-serif">Ahash Hotel</p>
+              <p className="text-sm text-gray-500 mt-2 uppercase tracking-widest">179, 183 Thalvupadu–Mannar Road, Mannar</p>
             </motion.div>
           </div>
         </div>
@@ -411,7 +411,7 @@ export default function App() {
               Location
             </h2>
             <p className="text-xl text-gray-600 font-serif">
-              179, 183 Thalvupadu–Mannar Road
+              Ahash Hotel, Mannar
             </p>
           </motion.div>
 
@@ -453,13 +453,13 @@ export default function App() {
                 </motion.div>
               </div>
               <p className="relative z-10 text-[#5C0F1C] font-serif text-lg font-semibold tracking-widest uppercase mt-2">
-                179, 183 Thalvupadu–Mannar Road
+                Ahash Hotel
               </p>
-              <p className="relative z-10 text-gray-500 text-sm uppercase tracking-widest">
-                Mannar 41000, Sri Lanka
+              <p className="relative z-10 text-gray-500 text-sm uppercase tracking-widest text-center px-4">
+                179, 183 Thalvupadu–Mannar Road, Mannar
               </p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=179%2C+183+Thalvupadu-Mannar+Road%2C+Mannar+41000%2C+Sri+Lanka"
+                href="https://www.google.com/maps/search/?api=1&query=Ahash+Hotel%2C+179%2C+183+Thalvupadu-Mannar+Road%2C+Mannar+41000%2C+Sri+Lanka"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative z-10 mt-2 inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-[#8B1E2F] to-[#5C0F1C] text-white font-serif text-sm tracking-widest uppercase shadow-lg hover:scale-105 transition-transform"
@@ -471,19 +471,21 @@ export default function App() {
 
             <div className="p-8 text-center font-serif">
               <h3 className="text-2xl font-serif text-[#5C0F1C] mb-3">
-                179, 183 Thalvupadu–Mannar Road
+                Ahash Hotel
               </h3>
               <p className="text-gray-600 mb-4 uppercase tracking-widest text-sm">
+                179, 183 Thalvupadu–Mannar Road,
+                <br />
                 Mannar 41000, Sri Lanka
               </p>
               <div className="flex flex-wrap justify-center gap-6 text-sm mb-6">
                 <a href="tel:+94237858878" className="flex items-center gap-2 text-gray-600 hover:text-[#8B1E2F]">
                   <Phone className="w-4 h-4 text-[#8B1E2F]" />
-                  <span>Venue: +94 23 785 8878</span>
+                  <span>Telephone: 023 785 8878</span>
                 </a>
               </div>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=179%2C+183+Thalvupadu-Mannar+Road%2C+Mannar+41000%2C+Sri+Lanka"
+                href="https://www.google.com/maps/search/?api=1&query=Ahash+Hotel%2C+179%2C+183+Thalvupadu-Mannar+Road%2C+Mannar+41000%2C+Sri+Lanka"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#8B1E2F] to-[#5C0F1C] text-white font-serif text-sm tracking-widest uppercase shadow-lg hover:scale-105 transition-transform"
@@ -565,7 +567,7 @@ export default function App() {
             </div>
 
             <p className="text-gray-500 font-serif tracking-widest text-sm uppercase">
-              November 20, 2026 • Mannar, Sri Lanka
+              November 20, 2026 • Ahash Hotel, Mannar
             </p>
 
             <p className="text-[#8B1E2F]/70 text-xs mt-10 font-sans tracking-wider">
