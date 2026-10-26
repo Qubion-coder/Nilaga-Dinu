@@ -411,7 +411,7 @@ export default function App() {
               Location
             </h2>
             <p className="text-xl text-gray-600 font-serif">
-              Ahash Hotel, Mannar
+              Find your way to us
             </p>
           </motion.div>
 
@@ -422,7 +422,7 @@ export default function App() {
             className="bg-gradient-to-br from-white to-slate-50 rounded-2xl overflow-hidden shadow-xl border-2 border-[#8B1E2F]/30"
           >
             {/* Decorative Map Visual */}
-            <div className="relative bg-gradient-to-br from-[#f0f7f1] via-[#e8f4ea] to-[#ddeee0] py-16 flex flex-col items-center justify-center gap-4 border-b border-[#8B1E2F]/20">
+            <div className="relative bg-gradient-to-br from-[#f0f7f1] via-[#e8f4ea] to-[#ddeee0] py-16 flex flex-col items-center justify-center gap-4">
               {/* Grid lines for map feel */}
               <div className="absolute inset-0 opacity-10"
                 style={{
@@ -456,39 +456,19 @@ export default function App() {
                 Ahash Hotel
               </p>
               <p className="relative z-10 text-gray-500 text-sm uppercase tracking-widest text-center px-4">
-                179, 183 Thalvupadu–Mannar Road, Mannar
+                179, 183 Thalvupadu–Mannar Road,
+                <br />
+                Mannar 41000, Sri Lanka
               </p>
+              <a href="tel:+94237858878" className="relative z-10 flex items-center gap-2 text-gray-600 text-sm hover:text-[#8B1E2F]">
+                <Phone className="w-4 h-4 text-[#8B1E2F]" />
+                <span>Telephone: 023 785 8878</span>
+              </a>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Ahash+Hotel%2C+179%2C+183+Thalvupadu-Mannar+Road%2C+Mannar+41000%2C+Sri+Lanka"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative z-10 mt-2 inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-[#8B1E2F] to-[#5C0F1C] text-white font-serif text-sm tracking-widest uppercase shadow-lg hover:scale-105 transition-transform"
-              >
-                <MapPin className="w-4 h-4" />
-                Open in Google Maps
-              </a>
-            </div>
-
-            <div className="p-8 text-center font-serif">
-              <h3 className="text-2xl font-serif text-[#5C0F1C] mb-3">
-                Ahash Hotel
-              </h3>
-              <p className="text-gray-600 mb-4 uppercase tracking-widest text-sm">
-                179, 183 Thalvupadu–Mannar Road,
-                <br />
-                Mannar 41000, Sri Lanka
-              </p>
-              <div className="flex flex-wrap justify-center gap-6 text-sm mb-6">
-                <a href="tel:+94237858878" className="flex items-center gap-2 text-gray-600 hover:text-[#8B1E2F]">
-                  <Phone className="w-4 h-4 text-[#8B1E2F]" />
-                  <span>Telephone: 023 785 8878</span>
-                </a>
-              </div>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Ahash+Hotel%2C+179%2C+183+Thalvupadu-Mannar+Road%2C+Mannar+41000%2C+Sri+Lanka"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#8B1E2F] to-[#5C0F1C] text-white font-serif text-sm tracking-widest uppercase shadow-lg hover:scale-105 transition-transform"
               >
                 <MapPin className="w-4 h-4" />
                 Get Directions
