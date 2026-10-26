@@ -10,8 +10,8 @@ export function CountdownTimer() {
   }>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    // May 07, 2026
-    const targetDate = new Date('2026-05-07T09:00:00').getTime();
+    // November 20, 2026
+    const targetDate = new Date('2026-11-20T08:00:00').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -48,12 +48,12 @@ export function CountdownTimer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: index * 0.1 }}
-          className="bg-white/80 backdrop-blur-sm shadow-xl rounded-2xl p-6 border-2 border-[#D4AF37]/20 w-32 flex flex-col items-center justify-center transform hover:scale-105 transition-transform"
+          className="bg-white/80 backdrop-blur-sm shadow-xl rounded-2xl p-6 border-2 border-[#8B1E2F]/20 w-32 flex flex-col items-center justify-center transform hover:scale-105 transition-transform"
         >
-          <div className="text-4xl sm:text-5xl font-serif text-[#183d72] mb-2 font-bold">
+          <div className="text-4xl sm:text-5xl font-serif text-[#5C0F1C] mb-2 font-bold">
             {unit.value.toString().padStart(2, '0')}
           </div>
-          <div className="text-sm uppercase tracking-widest text-[#D4AF37] font-semibold">
+          <div className="text-sm uppercase tracking-widest text-[#8B1E2F] font-semibold">
             {unit.label}
           </div>
         </motion.div>

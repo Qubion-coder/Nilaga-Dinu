@@ -57,7 +57,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           background:
             radial-gradient(circle at 50% 10%, rgba(255,255,255,0.8), transparent 35%),
             radial-gradient(circle at 10% 20%, rgba(243,230,210,0.5), transparent 30%),
-            radial-gradient(circle at 90% 15%, rgba(213,225,243,0.35), transparent 28%),
+            radial-gradient(circle at 90% 15%, rgba(240,220,224,0.35), transparent 28%),
             linear-gradient(180deg, #f7f2eb 0%, #ede3d9 100%);
         }
 
@@ -108,7 +108,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           height: 680px;
           border-radius: 999px;
           background:
-            radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(223,231,242,0.45) 35%, rgba(255,255,255,0) 72%);
+            radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(245,228,231,0.45) 35%, rgba(255,255,255,0) 72%);
           filter: blur(15px);
           z-index: 0;
           pointer-events: none;
@@ -163,11 +163,11 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           border-radius: 999px;
           display: grid;
           place-items: center;
-          background: linear-gradient(135deg, #204f90 0%, #17396a 100%);
+          background: linear-gradient(135deg, #8B1E2F 0%, #5C0F1C 100%);
           color: #fff;
           font-size: 13px;
           font-weight: 600;
-          box-shadow: 0 10px 24px rgba(23, 57, 106, 0.28);
+          box-shadow: 0 10px 24px rgba(92, 15, 28, 0.28);
         }
 
         .nav-mini {
@@ -230,7 +230,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           font-family: "Great Vibes", cursive;
           font-size: clamp(48px, 7vw, 88px);
           line-height: 0.95;
-          color: #183a69;
+          color: #5C0F1C;
           margin: 0 0 10px;
         }
 
@@ -271,9 +271,9 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
         }
 
         .hero-btn.primary {
-          background: linear-gradient(135deg, #1f4f92 0%, #173762 100%);
+          background: linear-gradient(135deg, #8B1E2F 0%, #5C0F1C 100%);
           color: #fff;
-          box-shadow: 0 16px 34px rgba(23, 57, 106, 0.22);
+          box-shadow: 0 16px 34px rgba(92, 15, 28, 0.22);
         }
 
         .hero-btn.secondary {
@@ -374,7 +374,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
 
         .detail-value {
           font-size: 26px;
-          color: #23497f;
+          color: #6A1424;
           margin-bottom: 8px;
           font-weight: 600;
         }
@@ -414,7 +414,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           height: 100%;
           border-radius: 10px;
           background:
-            linear-gradient(180deg, #f8effc 0%, #ecdcf5 100%);
+            linear-gradient(180deg, #ffffff 0%, #fbf4f5 100%);
           box-shadow:
             0 24px 60px rgba(65, 48, 34, 0.16),
             inset 0 1px 0 rgba(255,255,255,0.95);
@@ -432,7 +432,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           width: 100%;
           height: 100%;
           border-radius: 6px;
-          border: 2px solid rgba(104, 71, 154, 0.55);
+          border: 2px solid rgba(139, 30, 47, 0.55);
           position: relative;
           padding: 42px 26px 34px;
           display: flex;
@@ -448,7 +448,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           content: "";
           position: absolute;
           inset: 10px;
-          border: 1px solid rgba(104, 71, 154, 0.48);
+          border: 1px solid rgba(139, 30, 47, 0.48);
           border-radius: 4px;
           pointer-events: none;
         }
@@ -457,7 +457,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           content: "";
           position: absolute;
           inset: 20px;
-          border: 1px solid rgba(104, 71, 154, 0.2);
+          border: 1px solid rgba(139, 30, 47, 0.2);
           border-radius: 2px;
           pointer-events: none;
         }
@@ -475,7 +475,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           pointer-events: none;
           z-index: 0;
           opacity: 0.95;
-          filter: drop-shadow(0 2px 3px rgba(92, 41, 117, 0.2));
+          filter: drop-shadow(0 2px 3px rgba(106, 20, 36, 0.2));
         }
 
         .card-corner-image.top-left {
@@ -495,11 +495,11 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           border-radius: 999px;
           display: grid;
           place-items: center;
-          color: #5c2975;
-          border: 1px solid rgba(92, 41, 117, 0.15);
+          color: #6A1424;
+          border: 1px solid rgba(106, 20, 36, 0.15);
           background:
             radial-gradient(circle at top left, rgba(255,255,255,0.8), rgba(255,255,255,0.3));
-          box-shadow: 0 16px 34px rgba(92, 41, 117, 0.08);
+          box-shadow: 0 16px 34px rgba(106, 20, 36, 0.08);
           font-size: 34px;
           font-family: "Great Vibes", cursive;
           margin-bottom: 20px;
@@ -510,15 +510,15 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           font-size: 11px;
           letter-spacing: 0.26em;
           text-transform: uppercase;
-          color: rgba(92, 41, 117, 0.9);
+          color: rgba(106, 20, 36, 0.9);
           margin-bottom: 14px;
         }
 
         .card-title {
-          font-family: "Great Vibes", cursive;
+          font-family: "Pinyon Script", cursive;
           font-size: 58px;
           line-height: 0.92;
-          color: #4a2060;
+          color: #6A1424;
           margin: 0;
         }
 
@@ -537,45 +537,48 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           margin: 16px 0 26px;
           font-size: 18px;
           line-height: 1.7;
-          color: rgba(92, 41, 117, 0.85);
+          color: rgba(106, 20, 36, 0.85);
           max-width: 280px;
         }
 
         .card-divider {
           width: 90px;
           height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(92,41,117,0.3), transparent);
+          background: linear-gradient(90deg, transparent, rgba(106,20,36,0.3), transparent);
           margin-bottom: 24px;
         }
 
         .card-date {
           font-size: 18px;
-          color: rgba(92, 41, 117, 0.9);
+          color: rgba(106, 20, 36, 0.9);
           margin-bottom: 10px;
           font-style: italic;
         }
 
         .card-day {
-          font-size: 30px;
-          letter-spacing: 0.08em;
-          color: #4a2060;
+          font-size: 24px;
+          letter-spacing: 0.05em;
+          white-space: nowrap;
+          color: #6A1424;
           font-weight: 600;
           margin-bottom: 10px;
         }
 
         .card-time {
           font-size: 18px;
-          color: rgba(92, 41, 117, 0.85);
+          color: rgba(106, 20, 36, 0.85);
           margin-bottom: 18px;
         }
 
         .card-venue {
           font-family: "Inter", sans-serif;
-          font-size: 13px;
-          line-height: 1.9;
-          letter-spacing: 0.18em;
+          font-size: 12px;
+          line-height: 1.8;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: rgba(92, 41, 117, 0.9);
+          color: rgba(106, 20, 36, 0.9);
+          max-width: 100%;
+          overflow-wrap: break-word;
         }
 
         .envelope-sleeve {
@@ -588,9 +591,9 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           border-top-right-radius: 220px 54%;
           border-bottom-right-radius: 220px 54%;
           background:
-            linear-gradient(135deg, #6c3287 0%, #4a2060 48%, #2d113f 100%);
+            linear-gradient(135deg, #8B1E2F 0%, #6A1424 48%, #3D0A13 100%);
           box-shadow:
-            -18px 0 50px rgba(18, 35, 68, 0.36),
+            -18px 0 50px rgba(60, 10, 18, 0.36),
             inset 2px 0 8px rgba(255,255,255,0.18),
             inset -5px 0 14px rgba(0,0,0,0.3);
           z-index: 4;
@@ -603,7 +606,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           position: absolute;
           inset: 24px 16px 24px 16px;
           border-radius: 12px 160px 160px 12px;
-          border: 1px solid rgba(239, 215, 170, 0.24);
+          border: 1px solid rgba(255, 255, 255, 0.28);
           background:
             linear-gradient(145deg, rgba(255, 233, 198, 0.12), rgba(255, 233, 198, 0) 42%),
             radial-gradient(circle at 88% 28%, rgba(255, 234, 196, 0.2), transparent 42%);
@@ -616,7 +619,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           position: absolute;
           inset: 0;
           border-radius: inherit;
-          background: radial-gradient(circle at 12% 50%, rgba(14, 38, 71, 0.3), transparent 44%);
+          background: radial-gradient(circle at 12% 50%, rgba(40, 6, 12, 0.3), transparent 44%);
           pointer-events: none;
           z-index: 0;
         }
@@ -679,10 +682,10 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
         }
 
         .sleeve-names {
-          font-family: "Great Vibes", cursive;
+          font-family: "Pinyon Script", cursive;
           font-size: min(42px, 9vw);
-          color: #efd7aa;
-          text-shadow: 1px 1px 3px rgba(0,0,0,0.4), 0 0 15px rgba(239, 215, 170, 0.2);
+          color: #ffffff;
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.4), 0 0 15px rgba(255, 255, 255, 0.2);
           margin-bottom: 2px;
           white-space: nowrap;
           filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
@@ -693,8 +696,9 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           font-size: 8px;
           letter-spacing: 0.5em;
           text-transform: uppercase;
-          color: rgba(239, 215, 170, 0.6);
-          border-top: 1px solid rgba(239, 215, 170, 0.15);
+          font-size: 10px;
+          color: rgba(255, 255, 255, 0.75);
+          border-top: 1px solid rgba(255, 255, 255, 0.25);
           padding-top: 8px;
           margin-top: 2px;
           white-space: nowrap;
@@ -712,7 +716,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           background:
             radial-gradient(circle at 30% 30%, #f9f5d7 0%, #c49e49 20%, transparent 40%),
             radial-gradient(circle at 70% 70%, rgba(130, 80, 20, 0.8), transparent 50%),
-            conic-gradient(from 15deg, #c49e49, #8a5a19, #dfbf6c, #a67c00, #c49e49);
+            conic-gradient(from 15deg, #c49e49, #5C0F1C, #dfbf6c, #a67c00, #c49e49);
           box-shadow:
             0 16px 30px rgba(0,0,0,0.25),
             0 0 0 3px rgba(210, 160, 60, 0.15),
@@ -760,8 +764,8 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
 
         .seal-decor-image {
           position: absolute;
-          left: -58px;
-          top: 47%;
+          left: -78px;
+          top: 56%;
           width: 220px;
           height: 360px;
           object-fit: contain;
@@ -770,7 +774,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           opacity: ${opened ? 0 : 0.96};
           transition: opacity 0.45s ease;
           filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
-          transform: translateY(-50%) rotate(14deg);
+          transform: translateY(-50%) rotate(-10deg);
         }
 
         .seal-inner {
@@ -1005,8 +1009,8 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           }
 
           .seal-decor-image {
-            left: -42px;
-            top: 48%;
+            left: -60px;
+            top: 57%;
             width: 178px;
             height: 288px;
           }
@@ -1042,8 +1046,12 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
             bottom: 6px;
           }
 
+          .card-kicker {
+            margin-bottom: 8px;
+          }
+
           .card-title {
-            font-size: 42px;
+            font-size: 38px;
           }
 
           .card-title-amp {
@@ -1051,17 +1059,30 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           }
 
           .card-subtitle {
-            font-size: 16px;
+            font-size: 14px;
+            line-height: 1.5;
             max-width: 230px;
-            margin: 12px 0 14px;
+            margin: 10px 0 12px;
           }
 
           .card-divider {
             margin-bottom: 12px;
           }
 
+          .card-date {
+            font-size: 15px;
+            margin-bottom: 4px;
+          }
+
           .card-day {
-            font-size: 22px;
+            font-size: 17px;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+          }
+
+          .card-time {
+            font-size: 15px;
+            margin-bottom: 10px;
           }
 
           .card-venue {
@@ -1164,44 +1185,15 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
                 />
               ))}
 
-              <div className="flower-cluster">
-                <img
-                  src="/sea.png"
-                  alt="Decorative motif"
-                  className="real-flowers-img"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextElementSibling?.setAttribute('style', 'display:block; position:relative; width:100%; height:100%; transform: translateY(-70px) rotate(15deg);');
-                  }}
-                />
-
-                {/* Fallback real-looking stems structure if image is missing */}
-                <div className="flower-bundle-fallback" style={{ display: 'none' }}>
-                  {/* Long stems coming out the top */}
-                  <div className="stem" style={{ left: "40%", transform: "rotate(-18deg)" }}>
-                    <div style={{ position: "absolute", top: "0", left: "-8px", fontSize: "18px", filter: "sepia(1) hue-rotate(-30deg) saturate(1.5)" }}>🌿</div>
-                  </div>
-                  <div className="stem" style={{ left: "50%", transform: "rotate(-4deg)" }}>
-                    <div style={{ position: "absolute", top: "-10px", left: "-6px", fontSize: "20px", filter: "sepia(1) hue-rotate(-20deg) opacity(0.8)" }}>🌾</div>
-                  </div>
-                  <div className="stem" style={{ left: "60%", transform: "rotate(14deg)" }}>
-                    <div style={{ position: "absolute", top: "10px", left: "-6px", fontSize: "16px", filter: "sepia(0.8) hue-rotate(-30deg)" }}>🌾</div>
-                  </div>
-                  <div className="stem" style={{ left: "45%", transform: "rotate(-8deg)" }}>
-                    <div style={{ position: "absolute", top: "30px", left: "-5px", fontSize: "14px", filter: "sepia(1) hue-rotate(10deg)" }}>🌾</div>
-                  </div>
-                </div>
-              </div>
-
               <div className="invitation-card">
                 <div className="card-frame">
-                  <img src="/111.png" alt="" className="card-corner-image top-left" aria-hidden="true" />
-                  <img src="/111.png" alt="" className="card-corner-image bottom-right" aria-hidden="true" />
+                  <img src="/corner-maroon.png" alt="" className="card-corner-image top-left" aria-hidden="true" />
+                  <img src="/corner-maroon.png" alt="" className="card-corner-image bottom-right" aria-hidden="true" />
                   <div className="card-kicker">Promise Of Love</div>
                   <h2 className="card-title">
-                    <span className="card-title-line">Dinuka</span>
+                    <span className="card-title-line">Nilaga</span>
                     <span className="card-title-amp">&</span>
-                    <span className="card-title-line">Supuni</span>
+                    <span className="card-title-line">Dinu</span>
                   </h2>
 
                   <div className="card-subtitle">
@@ -1211,14 +1203,14 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
 
                   <div className="card-divider" />
 
-                  <div className="card-date">Thursday Morning</div>
-                  <div className="card-day">MAY 07, 2026</div>
-                  <div className="card-time">At 9:00 AM</div>
+                  <div className="card-date">Friday Morning</div>
+                  <div className="card-day">NOVEMBER 20, 2026</div>
+                  <div className="card-time">At 8:00 AM</div>
 
                   <div className="card-venue">
-                    Seven Say Banquet Hall
+                    179, 183 Thalvupadu–Mannar Road
                     <br />
-                    Magalegoda, Veyangoda
+                    Mannar 41000, Sri Lanka
                   </div>
                 </div>
               </div>
@@ -1228,11 +1220,13 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
                 <div className="sleeve-shine" />
                 <div className="sleeve-edge" />
                 <div className="sleeve-content">
+                  <div className="sleeve-names">Nilaga &amp; Dinu</div>
+                  <div className="sleeve-tagline">20 . 11 . 2026</div>
                 </div>
               </div>
 
               <img
-                src="/sea.png"
+                src="/Icy_Silver_ND_Botanical_Emblem-removebg-preview.png"
                 alt=""
                 className="seal-decor-image"
                 aria-hidden="true"

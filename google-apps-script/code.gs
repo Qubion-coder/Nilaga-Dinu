@@ -1,33 +1,63 @@
-const SPREADSHEET_ID = '1jMa12xeTFbfdR5s3NAnYyQT8izPZ-8GAx82X_5i04EE';
+// Nilaga & Dinu wedding – RSVP and Wishes collector
+// https://docs.google.com/spreadsheets/d/18bCf003WBbG18fmWLkKYkz2Fq4Ra4o0PzFXHLRWeb7U/edit
+const SPREADSHEET_ID = '18bCf003WBbG18fmWLkKYkz2Fq4Ra4o0PzFXHLRWeb7U';
+
+const SHEETS = {
+  RSVP: {
+    name: 'RSVP',
+    headers: ['Timestamp', 'Full Name', 'Phone Number', 'Number of Guests', 'Attending', 'Dietary Restrictions / Requests'],
+    widths: [170, 200, 150, 140, 120, 320],
+  },
+  WISH: {
+    name: 'Wishes',
+    headers: ['Timestamp', 'Name', 'Wishes / Blessing'],
+    widths: [170, 200, 520],
+  },
+};
+
+const HEADER_BG = '#8B1E2F';
+const HEADER_TEXT = '#FFFFFF';
+
+// Run this once from the Apps Script editor (select "setupSheets" and click Run)
+// to create both tabs with formatted headers.
+function setupSheets() {
+  const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  Object.keys(SHEETS).forEach(function (key) {
+    prepareSheet_(ss, SHEETS[key]);
+  });
+}
 
 function doPost(e) {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+
   try {
     const payload = parsePayload_(e);
     const sheetKey = String(payload.sheet || '').toUpperCase();
+    const config = SHEETS[sheetKey];
 
-    if (sheetKey !== 'RSVP' && sheetKey !== 'WISH') {
+    if (!config) {
       return jsonResponse_({ ok: false, error: 'Invalid sheet. Use RSVP or WISH.' });
     }
 
     const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
-    const sheet = getOrCreateSheet_(ss, sheetKey);
+    const sheet = prepareSheet_(ss, config);
 
     if (sheetKey === 'RSVP') {
-      ensureHeaders_(sheet, ['Timestamp', 'Name', 'Phone', 'Guests', 'Attendance', 'DietaryRestrictions']);
+      const attendance = String(payload.attendance || '').toLowerCase();
       sheet.appendRow([
         new Date(),
-        payload.name || '',
-        payload.phone || payload.email || '',
-        payload.guests || '',
-        payload.attendance || '',
-        payload.dietaryRestrictions || '',
+        clean_(payload.name),
+        clean_(payload.phone || payload.email),
+        clean_(payload.guests),
+        attendance === 'yes' ? 'Joyfully Accept' : attendance === 'no' ? 'Regretfully Decline' : clean_(payload.attendance),
+        clean_(payload.dietaryRestrictions),
       ]);
     } else {
-      ensureHeaders_(sheet, ['Timestamp', 'Name', 'Message']);
       sheet.appendRow([
         new Date(),
-        payload.name || '',
-        payload.message || '',
+        clean_(payload.name),
+        clean_(payload.message),
       ]);
     }
 
@@ -37,14 +67,48 @@ function doPost(e) {
       ok: false,
       error: String(error && error.message ? error.message : error),
     });
+  } finally {
+    lock.releaseLock();
   }
 }
 
 function doGet() {
   return jsonResponse_({
     ok: true,
-    message: 'Wedding form endpoint is running.',
+    message: 'Nilaga & Dinu wedding form endpoint is running.',
   });
+}
+
+function prepareSheet_(ss, config) {
+  let sheet = ss.getSheetByName(config.name);
+  if (!sheet) {
+    sheet = ss.insertSheet(config.name);
+  }
+
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(config.headers);
+    sheet.getRange(1, 1, 1, config.headers.length)
+      .setFontWeight('bold')
+      .setBackground(HEADER_BG)
+      .setFontColor(HEADER_TEXT)
+      .setHorizontalAlignment('center')
+      .setVerticalAlignment('middle');
+    sheet.setRowHeight(1, 32);
+    sheet.setFrozenRows(1);
+    config.widths.forEach(function (width, i) {
+      sheet.setColumnWidth(i + 1, width);
+    });
+    sheet.getRange('A:A').setNumberFormat('yyyy-mm-dd hh:mm');
+    sheet.getRange(2, config.headers.length, sheet.getMaxRows() - 1, 1).setWrap(true);
+  }
+
+  return sheet;
+}
+
+// Prevents values starting with = + - @ from being run as spreadsheet formulas.
+function clean_(value) {
+  const text = String(value == null ? '' : value).trim();
+  return /^[=+\-@]/.test(text) ? "'" + text : text;
 }
 
 function parsePayload_(e) {
@@ -88,20 +152,6 @@ function parseQueryString_(query) {
   }
 
   return out;
-}
-
-function getOrCreateSheet_(ss, name) {
-  let sheet = ss.getSheetByName(name);
-  if (!sheet) {
-    sheet = ss.insertSheet(name);
-  }
-  return sheet;
-}
-
-function ensureHeaders_(sheet, headers) {
-  if (sheet.getLastRow() === 0) {
-    sheet.appendRow(headers);
-  }
 }
 
 function jsonResponse_(data) {

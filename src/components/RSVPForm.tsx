@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { Send } from 'lucide-react';
 import { toast } from 'sonner';
+import { GOOGLE_APPS_SCRIPT_URL } from '../config';
 
 interface RSVPFormData {
   name: string;
@@ -15,7 +16,7 @@ interface RSVPFormData {
 export function RSVPForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<RSVPFormData>();
-  const scriptUrl = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL as string | undefined;
+  const scriptUrl = GOOGLE_APPS_SCRIPT_URL;
 
   const onSubmit = async (data: RSVPFormData) => {
     setIsSubmitting(true);
@@ -55,13 +56,13 @@ export function RSVPForm() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       onSubmit={handleSubmit(onSubmit)}
-      className="max-w-2xl mx-auto bg-gradient-to-br from-white to-slate-50 rounded-2xl p-8 shadow-xl border-2 border-[#D4AF37]/30 relative"
+      className="max-w-2xl mx-auto bg-gradient-to-br from-white to-slate-50 rounded-2xl p-8 shadow-xl border-2 border-[#8B1E2F]/30 relative"
     >
       {/* Decorative Corners */}
-      <div className="absolute top-4 left-4 w-12 h-12 border-l-2 border-t-2 border-[#D4AF37]" />
-      <div className="absolute top-4 right-4 w-12 h-12 border-r-2 border-t-2 border-[#D4AF37]" />
-      <div className="absolute bottom-4 left-4 w-12 h-12 border-l-2 border-b-2 border-[#D4AF37]" />
-      <div className="absolute bottom-4 right-4 w-12 h-12 border-r-2 border-b-2 border-[#D4AF37]" />
+      <div className="absolute top-4 left-4 w-12 h-12 border-l-2 border-t-2 border-[#8B1E2F]" />
+      <div className="absolute top-4 right-4 w-12 h-12 border-r-2 border-t-2 border-[#8B1E2F]" />
+      <div className="absolute bottom-4 left-4 w-12 h-12 border-l-2 border-b-2 border-[#8B1E2F]" />
+      <div className="absolute bottom-4 right-4 w-12 h-12 border-r-2 border-b-2 border-[#8B1E2F]" />
 
       <div className="space-y-6">
         {/* Name Field */}
@@ -71,7 +72,7 @@ export function RSVPForm() {
           </label>
           <input
             {...register('name', { required: 'Name is required' })}
-            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#D4AF37] focus:outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#8B1E2F] focus:outline-none transition-colors bg-white"
             placeholder="Enter your name"
           />
           {errors.name && (
@@ -92,7 +93,7 @@ export function RSVPForm() {
                 message: 'Invalid phone number'
               }
             })}
-            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#D4AF37] focus:outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#8B1E2F] focus:outline-none transition-colors bg-white"
             placeholder="0771234567"
           />
           {errors.phone && (
@@ -107,7 +108,7 @@ export function RSVPForm() {
           </label>
           <select
             {...register('guests', { required: 'Please select number of guests' })}
-            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#D4AF37] focus:outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#8B1E2F] focus:outline-none transition-colors bg-white"
           >
             <option value="">Select...</option>
             <option value="1">1 Guest</option>
@@ -134,7 +135,7 @@ export function RSVPForm() {
                 value="yes"
                 className="peer sr-only"
               />
-              <div className="px-6 py-3 rounded-lg border-2 border-gray-200 text-center cursor-pointer peer-checked:border-[#D4AF37] peer-checked:bg-[#D4AF37]/10 transition-all">
+              <div className="px-6 py-3 rounded-lg border-2 border-gray-200 text-center cursor-pointer peer-checked:border-[#8B1E2F] peer-checked:bg-[#8B1E2F]/10 transition-all">
                 <span className="font-serif">Joyfully Accept</span>
               </div>
             </label>
@@ -145,7 +146,7 @@ export function RSVPForm() {
                 value="no"
                 className="peer sr-only"
               />
-              <div className="px-6 py-3 rounded-lg border-2 border-gray-200 text-center cursor-pointer peer-checked:border-[#D4AF37] peer-checked:bg-[#D4AF37]/10 transition-all">
+              <div className="px-6 py-3 rounded-lg border-2 border-gray-200 text-center cursor-pointer peer-checked:border-[#8B1E2F] peer-checked:bg-[#8B1E2F]/10 transition-all">
                 <span className="font-serif">Regretfully Decline</span>
               </div>
             </label>
@@ -163,7 +164,7 @@ export function RSVPForm() {
           <textarea
             {...register('dietaryRestrictions')}
             rows={3}
-            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#D4AF37] focus:outline-none transition-colors resize-none bg-white"
+            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#8B1E2F] focus:outline-none transition-colors resize-none bg-white"
             placeholder="Let us know if you have any dietary restrictions..."
           />
         </div>
@@ -174,7 +175,7 @@ export function RSVPForm() {
           disabled={isSubmitting}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full py-4 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-white rounded-lg font-serif text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full py-4 bg-gradient-to-r from-[#8B1E2F] to-[#5C0F1C] text-white rounded-lg font-serif text-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
             <span>Sending...</span>
